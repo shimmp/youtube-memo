@@ -11,6 +11,14 @@ use Laravel\Sanctum\HasApiTokens;
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
+    public function memos()   
+    {
+        return $this->hasMany(Memo::class);  //Memoへの複数リレーション設定
+    }
+    public function folders()   
+    {
+        return $this->hasMany(Folder::class);  
+    }
 
     /**
      * The attributes that are mass assignable.
