@@ -11,6 +11,7 @@
                 <div class="p-6 text-gray-900">
                     {{ __("You're logged in!") }}
                 </div>
+                <a href="/dashboard/search">探す</a>
             </div>
         </div>
     </div>
