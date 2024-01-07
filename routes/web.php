@@ -30,6 +30,7 @@ Route::get('/youtube/search', [YoutubeapiController::class, 'search'])->name('se
 
 Route::get('/memos',[MemoController::class,'index']);//メモ一覧表示
 Route::get('/memos/create',[MemoController::class,'create']);//メモ作成画面へ
+Route::post('/memos',[MemoController::class,'store']);
 Route::get('/memos/{memo}',[Memocontroller::class,'edit']);//メモ詳細の表示
 
 Route::middleware('auth')->group(function () {

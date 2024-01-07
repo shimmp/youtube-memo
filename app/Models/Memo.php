@@ -8,6 +8,10 @@ use App\Models\User;
 
 class Memo extends Model
 {
+    protected $fillable=[
+        'title',
+        'body',
+    ];
     public function User()
     {
         return $this->belongsTo(User::class);//userの単数リレーション

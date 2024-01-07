@@ -13,14 +13,13 @@
         </style>    
     </head>
     <body>
-        <textarea id="memo",name="title"></textarea>
-        <button id="save">保存</button>
-         <script>
-    // テキストエリアとボタンの要素を取得
-    const memo = document.getElementById("memo");
-    const save = document.getElementById("save");
-    const load = document.getElementById("load");
-
-  </script>
+        <form action="/memos" method="POST">
+            @csrf
+            <input type"text" name= "memo[title]"placeholder="タイトル">
+            <label for="title">内容</label>
+            <textarea id="memo" name="memo[body]"></textarea>
+            <input type="submit" value="作成">
+        </form>
+        <a href="/memos">戻る</a>
 </body>
 </html>
