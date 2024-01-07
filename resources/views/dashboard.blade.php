@@ -12,6 +12,7 @@
                     {{ __("You're logged in!") }}
                 </div>
                 <a href="/dashboard/search">探す</a>
+                <a href="/memos">メモ</a>
             </div>
         </div>
     </div>

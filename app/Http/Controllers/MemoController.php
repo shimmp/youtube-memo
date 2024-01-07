@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Models\Memo;
 
 class MemoController extends Controller
 {
@@ -10,5 +11,15 @@ class MemoController extends Controller
     {
         return view('memos.memo');
     }
-    
+    public function edit(Memo $memo){
+        return view('memo.memo')->with(['memo'=> $memo->get()]);
+    }
+    public function create(){
+        return view('memo.create');
+    }
+     public function index(){
+        $user = Auth::user();//ログインしているuserのテーブルを取得
+        $memos = $user->memos()-> get(); // ユーザーに関連するメモを取得
+        return view('memo.memo_index')->with(['memos'=> $memos]);
+    }
 }
