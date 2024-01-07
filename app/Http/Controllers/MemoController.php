@@ -15,7 +15,16 @@ class MemoController extends Controller
         return view('memo.memo')->with(['memo'=> $memo->get()]);
     }
     public function create(){
-        return view('memo.create');
+        return view('memo.memo_create');
+    }
+    public function store(Request $request,Memo $memo){
+        $input = $request['memo'];
+        $user = Auth::user();
+        $memo->title=$input["title"];
+        $memo->body=$input["body"];
+        $memo->user_id=$user["id"];
+        $memo->save();
+        return redirect('/memos')->with(['memos'=> $memo]);
     }
      public function index(){
         $user = Auth::user();//ログインしているuserのテーブルを取得
