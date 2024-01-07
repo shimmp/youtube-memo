@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Memo;
+use App\Http\Requests\MemoRequest;
 
 class MemoController extends Controller
 {
@@ -12,10 +13,17 @@ class MemoController extends Controller
         return view('memos.memo');
     }
     public function edit(Memo $memo){
-        return view('memo.memo')->with(['memo'=> $memo->get()]);
+        return view('memo.memo_edit')->with(['memo'=> $memo]);
     }
     public function create(){
         return view('memo.memo_create');
+    }
+    public function update(Request $request,Memo $memo){
+        $input = $request['memo'];
+        $memo->title=$input["title"];
+        $memo->body = $input["body"];
+        $memo->save();
+        return redirect('/memos');
     }
     public function store(Request $request,Memo $memo){
         $input = $request['memo'];

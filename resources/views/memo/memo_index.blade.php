@@ -13,6 +13,7 @@
                 <div class = 'memo'>
                     <div class = 'root'><a href="/memos/{{$memo->id}}">{{$memo -> title}}</div>
                     <p class = 'body' >{{$memo->body}}</p>
+                    <div class = 'edit'><a href = "/memos/{{$memo->id}}/edit">編集</div>
                 </div>
             @endforeach
             <div class = edit><a href ="/memos/create">作成</div>
