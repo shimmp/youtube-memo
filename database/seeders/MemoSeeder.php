@@ -23,6 +23,13 @@ class MemoSeeder extends Seeder
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
             ]);
+            DB::table('memos')->insert([
+            'user_id' => '1',
+            'title' => 'samplememo_2',
+            'body' => 'こんにちは',
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime(),
+            ]);
         //
     }
 }

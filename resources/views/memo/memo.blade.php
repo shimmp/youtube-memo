@@ -1,18 +1,26 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="ja">
     <head>
         <meta charset="utf-8">
-        <title>Blog</title>
+        <title>javaメモ</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <style>
+            textarea{
+                width: 100%;
+                height: 300px;
+            }
+        </style>    
     </head>
     <body>
-        <h1>Blog Name</h1>
-        <div class='posts'>
-            <div class='post'>
-                <h2 class='title'>Title</h2>
-                <p class='body'>This is a sample body.</p>
-            </div>
-        </div>
-    </body>
+        <textarea id="memo",name="title"></textarea>
+        <button id="save">保存</button>
+         <script>
+    // テキストエリアとボタンの要素を取得
+    const memo = document.getElementById("memo");
+    const save = document.getElementById("save");
+    const load = document.getElementById("load");
+
+  </script>
+</body>
 </html>
