@@ -25,14 +25,17 @@ Route::get('/dashboard', function () {
 
 Route::get('/dashboard/search',function(){
     return view('memo.search');
-});
-Route::get('/youtube/search', [YoutubeapiController::class, 'search'])->name('search');
+})->name('search');
+Route::get('/youtube/search', [YoutubeapiController::class, 'search']);
 
-Route::get('/memos',[MemoController::class,'index']);//メモ一覧表示
+Route::get('/meme',[MemoController::class,'meme']);
+
+Route::get('/memos',[MemoController::class,'index'])->name('index');//メモ一覧表示
 Route::get('/memos/create',[MemoController::class,'create']);//メモ作成画面へ
 Route::post('/memos',[MemoController::class,'store']);//メモ作成保存用
 Route::get('/memos/{memo}/edit',[MemoController::class,'edit']);//メモ詳細の表示
 Route::put('/memos/{memo}',[MemoController::class,'update']);//メモ編集
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
