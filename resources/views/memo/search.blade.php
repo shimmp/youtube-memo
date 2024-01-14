@@ -1,4 +1,5 @@
-<body>
+<x-app-layout>
+
 <!DOCTYPE html>
 <form action="/youtube/search" method="GET">
   <div>
@@ -10,3 +11,4 @@
   <input type="submit" value="Search">
 </form>
 </body>
+</x-app-layout>
