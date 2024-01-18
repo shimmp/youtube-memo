@@ -31,6 +31,10 @@ class MemoController extends Controller
         $memo->save();
         return redirect('/memos');
     }
+    public function delete(Memo $memo){
+        $memo->delete();
+        return redirect('/memos');
+    }
     public function store(Request $request,Memo $memo){
         $input = $request['memo'];
         $memo->title=$input["title"];

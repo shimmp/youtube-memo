@@ -33,6 +33,7 @@ Route::get('/meme',[MemoController::class,'meme']);
 Route::get('/memos',[MemoController::class,'index'])->name('index');//メモ一覧表示
 Route::get('/memos/create',[MemoController::class,'create']);//メモ作成画面へ
 Route::post('/memos',[MemoController::class,'store']);//メモ作成保存用
+Route::delete('/memos/{memo}',[MemoController::class,'delete']);//メモ削除
 Route::get('/memos/{memo}/edit',[MemoController::class,'edit']);//メモ詳細の表示
 Route::put('/memos/{memo}',[MemoController::class,'update']);//メモ編集
 
