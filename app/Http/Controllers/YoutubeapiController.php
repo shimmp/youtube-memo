@@ -27,10 +27,6 @@ class YoutubeapiController extends Controller
                     array_push($videos_title,$searchResult['snippet']['title']);
                     array_push($videos_id,$searchResult['id']['videoId']);
                   break;
-                case 'youtube#channel':
-                    array_push($videos_title,$searchResult['snippet']['title']);
-                    array_push($videos_id,$searchResult['id']['chanelid']);
-                  break;
               }
             }
             
