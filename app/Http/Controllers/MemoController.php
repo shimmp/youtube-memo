@@ -8,6 +8,9 @@ use App\Http\Requests\MemoRequest;
 
 class MemoController extends Controller
 {
+    public function search(){
+        return view('search.search');
+    }
     public function memo(Memo $memo)
     {
         return view('memos.memo');
