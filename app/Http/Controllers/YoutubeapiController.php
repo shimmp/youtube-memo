@@ -37,8 +37,8 @@ class YoutubeapiController extends Controller
             $error_message = htmlspecialchars($e->getMessage());
              Log::error('Google_Exception: ' . $error_message);
         }
-        $videos_count = count($videos_id);//取得した動画などの数
-        return view('memo.searchlist',[
+        $videos_count = count($videos_id);//取得した動画の数
+        return view('search.searchlist',[
             'videos_title'=> $videos_title,
             'videos_id'=> $videos_id,
             'videos_count'=> $videos_count,

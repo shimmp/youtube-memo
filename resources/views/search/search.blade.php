@@ -1,6 +1,4 @@
 <x-app-layout>
-
-<!DOCTYPE html>
 <form action="/youtube/search" method="GET">
   <div>
     Search Term: <input type="search" id="q" name="q" placeholder="Enter Search Term">

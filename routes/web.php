@@ -23,9 +23,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/dashboard/search',function(){
-    return view('memo.search');
-})->name('search');
+Route::get('/dashboard/search',[MemoController::class,'search'])->name('search');
 Route::get('/youtube/search', [YoutubeapiController::class, 'search']);
 
 Route::get('/meme',[MemoController::class,'meme']);

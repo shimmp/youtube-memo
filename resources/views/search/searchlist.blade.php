@@ -11,7 +11,7 @@
                 <div>
                     <!-- hidden フィールドを使用して $videos_id[$i] の情報を送信する -->
                     <input type="hidden" name="video_id" value="{{$videos_id[$i]}}">
-                    <input type="submit" value="この動画にする">
+                    <input class="rounded-md bg-red-400" type="submit" value="make this video">
                 </div>
             </form>
         @endfor
