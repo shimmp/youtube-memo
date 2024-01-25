@@ -10,11 +10,11 @@
         <form action="/memos" method="POST">
             @csrf
             <div class="absolute inset-y-0 right-20 w-2/5 h-full">
-            <input type"text" name= "memo[title]"placeholder="タイトル">
-            <label for="title">内容</label>
+            <input type"text" name= "memo[title]"placeholder="title">
+            <label for="title">content</label>
             <textarea class="w-full h-96" id="memo" name="memo[body]"></textarea>
             <input type="hidden" name="memo[video_id]" value="{{$video_id}}">
-            <input class ="w-20 h-20 rounded-full bg-cyan-400" type="submit" value="作成">
+            <input class ="w-20 h-20 rounded-full bg-cyan-400" type="submit" value="create">
             </div>
         </form>
         <a href="/memos">return</a>
