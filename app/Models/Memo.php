@@ -16,10 +16,7 @@ class Memo extends Model
     {
         return $this->belongsTo(User::class);//userの単数リレーション
     }
-    public function folders()   
-    {
-        return $this->hasMany(Folder::class);  
-    }
+    
 
     use HasFactory;
 }

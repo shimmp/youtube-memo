@@ -15,10 +15,7 @@ class User extends Authenticatable
     {
         return $this->hasMany(Memo::class);  //Memoへの複数リレーション設定
     }
-    public function folders()   
-    {
-        return $this->hasMany(Folder::class);  
-    }
+    
 
     /**
      * The attributes that are mass assignable.
