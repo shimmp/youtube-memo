@@ -1,7 +1,7 @@
 <x-app-layout>
   <div class="relative w-full h-full">
     @if ($memo->movie_id !== null)
-      <iframe src="https://www.youtube.com/embed/{{$memo->movie_id}}" title="YouTube video player" width="830" height="600" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe class="w-1/2 aspect-[4/3]" src="https://www.youtube.com/embed/{{$memo->movie_id}}" title="YouTube video player" width="830" height="600" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     @else
       <div>動画がありません</div>
     @endif
