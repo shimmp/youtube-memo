@@ -22,7 +22,7 @@
             @endif
             </div>
           
-          <div class="">{{$memo ->title}}</div>
+          <div>{{$memo ->title}}</div>
         </div>
       </a>
 
