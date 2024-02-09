@@ -8,8 +8,9 @@
 https://memo-tube-9de6b5f16f94.herokuapp.com/
 
 ### テスト用アカウント
-メールアドレス:sample@2
-パスワード:12345678
+メールアドレス:sample@gmail.com
+
+パスワード:yhueid23
 
 ### 利用方法
 ### メモを作成したい場合
